@@ -1,0 +1,14 @@
+{
+  "name": "futures-sdk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "054940f4d349d0897590.js",
+  "scripts": {
+    "start": "ws --port 3333"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "local-web-server": "^5.2.1"
+  }
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My Futures Exchange</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+      }
+      #app {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+    </style>
+    <script src="/s3/sdk/sdk.1.8.0.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      const darkPalette = {
+        modalBg: '#232531',
+        popupBg: '#1E1F31',
+        bg1: '#171822', // default backgroud; dropdown backgroud; tooltip backgroud
+        bg2: '#0B0C12',
+        bg3: '#2D2E3F', // disable/hover backgroud; disable line
+        bg4: '#5A5C75',
+        bg5: '#FFFFFF', // navigation backgroud; mask backgroud
+        bg6: '#0A0A0F', // shadow
+        line: '#3B3D59', // line; outlines; input border
+        liteBg1: '#20262D',
+        liteBg2: '#191A1F',
+        t: {
+          primary: '#F0F0F5',
+          secondary: '#B2B4C6',
+          third: '#72768F',
+          placeholder: '#5A5C74',
+          disabled: '#5A5C74',
+          yellow: '#7E9AFF',
+          buy: '#2BBDB5',
+          sell: '#FF5AB5',
+          toast: '#3D509C',
+          white: '#FFFFFF',
+          emphasize: '#FFD37E',
+        },
+        slider: {
+          radioButtonBorderColor: '#FFFFFF',
+        },
+        alertYellowBg: '#FFB237',
+        badgeYellowBg: '#313553',
+        outlineHover: '#4C507A',
+        primaryHover: '#6B78EE', // background hover
+        primary: '#584CEA', // background; text hover
+        toastFailBg: '#4A2A3C',
+        depthSellBg: '#4A2A3C',
+        sellHover: '#FD5CB7',
+        sell: '#EF3E9E',
+        toastSuccessBg: '#2E4145',
+        depthBuyBg: '#2E4145',
+        buyHover: '#3CC6BE',
+        buy: '#1DB1A8',
+        overallBg: '#26283C',
+        moduleBg: '#121221',
+        inputBg: '#2C2D43',
+        tagBg: '#222742',
+        newLine: '#27273D',
+        lineForK: '#1B1F24',
+        icons: {
+          close: '#424555',
+        },
+      }
+      const params = window.location.pathname.split('/')
+      let lng = params[1]
+      const _symbol = params[params.length - 1]
+      const symbol = _symbol === 'index.html' ? 'BTCUSDT' : _symbol
+
+      // test usePairPrice with uniswapV2LP and uniswapV3LP
+      const uniswapV2LP ={
+        lpPairAddress: '0xe730c7b7470447ad4886c763247012dfd233baff', // baby/usdt pair
+        lpBaseAddress: '0x53e562b9b7e5e94b81f10e96ee70ad06df3d2657', // baby address
+        lpQuoteAddress: '0x55d398326f99059ff775485246999027b3197955', // usdt address
+      }
+      const uniswapV3LP ={
+        lpPairAddress: '0xd0fc8ba7e267f2bc56044a7715a489d851dc6d78', // Uniswap V3: UNI-USDC
+        lpBaseAddress: '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984', // UNI
+        lpQuoteAddress: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', // USDC
+        network: 'eth'
+      }
+
+      const defaultConfig = {
+          staticBaseUrl: '',
+          apiBaseUrl: location.origin,
+          i18nBaseUrl: 'https://cloudfutures-static.binancedev.com/api/i18n/-/web/cms/sp/8ed724c43',
+          configBaseUrl: 'https://cloudfutures-static.binancedev.com/cloud-futures/static/config',
+          imageBaseUrl: 'https://cloudfutures-static.binancedev.com/cloud-futures/static/images',
+          apxStaticBaseUrl: 'https://cloudfutures-static.binancedev.com/cloud-futures',
+          futuresWsHost: 'wss://perp-qa.pancakeswap.finance/plain', // temp, fstream.binanceqa.com cannot connect
+          sensorsServerHost: 'https://sensors.apollox.cloud/sa?project=default',
+          darkPalette,
+          lighPalette: {},
+          isTestnet: true,
+          brokerId: 100,
+          walletName: 'test',
+          loadingImage: {
+            url: './static/images/example-loading-image.gif'
+          },
+          // supportNetworks: ['arb', 'eth', 'bnb'],
+          // supportLanguages: ['en', 'es', 'zh-CN', 'zh-TW', 'ja'],
+          headerConfig: {
+            logo: {
+              darkImgUrl: 'https://cloudfutures-static.binancedev.com/cloud-futures/static/images/common/logo.svg',
+              lightImgUrl: 'https://cloudfutures-static.binancedev.com/cloud-futures/static/images/common/logo.svg',
+              // navTo: 'https://www.apollox.finance',
+              // navTarget: '_parent'
+            },
+
+            menu: {
+              data: [{text: 'Swap', navTo: '/en/onchain/demo/BTCUSDT#test'}],
+              placement: 'left',
+            },
+
+            token: {
+              imgUrl: `https://cloudfutures-static.binancedev.com/cloud-futures/static/images/futures/assets/leon/logo.svg`,
+              navTo: 'https://dex.leonicornswap.com/swap?outputCurrency=0x2c8368f8F474Ed9aF49b87eAc77061BEb986c2f1',
+              pricePrecision: 6,
+              ...uniswapV3LP,
+            },
+
+            customerService: {
+              navTo: 'https://apollox.zendesk.com/hc/%lng%/requests/new'
+            },
+          },
+          // headerConfig:{
+          // },
+          // styles
+          defaultTheme: 'dark',
+          variants: {
+            widget: {
+              default: {
+                borderRadius: '16px',
+                border: '1px solid',
+                borderColor: 'primary'
+              }
+            },
+            button: {
+              default: {
+                borderRadius: '16px'
+              }
+            },
+            'orderform': {
+              inputWrapper: {
+                borderRadius: '16px',
+              }
+            }
+          },
+          features: {
+            referral: {
+              enabled: true
+            }
+          }
+        }
+
+      function initApp(config){
+        FuturesSDK.createTradeUI({
+          container: document.getElementById('app'),
+          config,
+          state: {
+            symbol,
+            lng,
+          },
+        })
+
+        FuturesSDK.eventListener.on('symbolChange', (data) => {
+          console.log('symbol change', data.symbol)
+          window.history.replaceState({}, null, data.symbol);
+        })
+        FuturesSDK.eventListener.on('invalidSymbol', (data) => window.location.href = `/${lng}/onchain/demo/BTCUSD`)
+        FuturesSDK.eventListener.on('startLoad', () =>  console.log('startLoad event received'))
+        FuturesSDK.eventListener.on('lngChange', (data) => window.history.pushState({}, null, `/${data.lng}/onchain/demo/${ data.symbol || 'BTCUSD'}`))
+      }
+      initApp(defaultConfig)
+    </script>
+  </body>
+</html>
