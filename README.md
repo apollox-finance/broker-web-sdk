@@ -142,7 +142,7 @@ Import the static files that you just uploaded and init the trading page.
 
 ### Mock White List
 
-For development, you have to mock the whitelist API with [ajax interceptor extension](https://chrome.google.com/webstore/detail/ajax-interceptor/nhpjggchkhnlbgdfcbgpdpkifemomkpg), the response should be
+For development, you have to mock the whitelist API with [ajax interceptor extension](https://chrome.google.com/webstore/detail/tweak-mock-and-modify-htt/feahianecghpnipmhphmfgmpdodhcapi), the response should be
 
 ```
 {
