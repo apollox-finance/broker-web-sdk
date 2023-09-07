@@ -140,23 +140,6 @@ Import the static files that you just uploaded and init the trading page.
 </html>
 ```
 
-### Mock White List
-
-For development, you have to mock the whitelist API with [ajax interceptor extension](https://chrome.google.com/webstore/detail/tweak-mock-and-modify-htt/feahianecghpnipmhphmfgmpdodhcapi), the response should be
-
-```
-{
-  "code": "000000",
-  "message": null,
-  "messageDetail": null,
-  "data":{ "sourceCode":""},
-  "success": true
-}
-
-```
-
-![./docs/images/ajax-interceptor.png](./docs/images/ajax-interceptor.png)
-
 Then, run the local server and open [http://127.0.0.1:3333](http://127.0.0.1:3333/), you will see your exchange website is ready!
 
 ```
@@ -165,7 +148,7 @@ Then, run the local server and open [http://127.0.0.1:3333](http://127.0.0.1:33
 
 ### Step3.Deploy
 
-Deploy the index.html to AWS sever under your domain and make sure your domain is already in the whitelist.
+Deploy the index.html to AWS sever under your domain.
 
 Now, you can visit trading page.
 

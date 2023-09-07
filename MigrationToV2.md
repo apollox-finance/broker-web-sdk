@@ -20,3 +20,5 @@
    1. remove `footerConfig`
 
 1. Remove `login` event
+
+1. Remove broker whitelist restrict
