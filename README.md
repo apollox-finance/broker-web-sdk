@@ -236,7 +236,7 @@ type Config = {
   staticBaseUrl: string;
   apiBaseUrl: string;
   brandName?: string;
-  brokerId?: number;
+  brokerId: number;
   i18nBaseUrl: string;
   configBaseUrl: string;
   darkPalette?: Partial<PaletteInterface>;
