@@ -2,28 +2,30 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>My Futures Exchange</title>
     <meta name="viewport" content="width=device-width" />
+    <title>My Futures Exchange</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <style>
-      html, body {
+      html,
+      body {
         margin: 0;
         padding: 0;
         width: 100vw;
         height: 100vh;
       }
+
       #app {
         width: 100%;
         height: 100%;
         overflow: hidden;
       }
     </style>
-    <script src="/s3/sdk/sdk.1.8.0.js"></script>
+    <script src="/sdk/sdk.2.0.2.js"></script>
   </head>
   <body>
     <div id="app"></div>
     <script>
-      const darkPalette = {
+     const darkPalette = {
         modalBg: '#232531',
         popupBg: '#1E1F31',
         bg1: '#171822', // default backgroud; dropdown backgroud; tooltip backgroud
@@ -74,10 +76,6 @@
           close: '#424555',
         },
       }
-      const params = window.location.pathname.split('/')
-      let lng = params[1]
-      const _symbol = params[params.length - 1]
-      const symbol = _symbol === 'index.html' ? 'BTCUSDT' : _symbol
 
       // test usePairPrice with uniswapV2LP and uniswapV3LP
       const uniswapV2LP ={
@@ -93,7 +91,7 @@
       }
 
       const defaultConfig = {
-          staticBaseUrl: '',
+          staticBaseUrl: '/static/',
           apiBaseUrl: location.origin,
           i18nBaseUrl: 'https://cloudfutures-static.binancedev.com/api/i18n/-/web/cms/sp/8ed724c43',
           configBaseUrl: 'https://cloudfutures-static.binancedev.com/cloud-futures/static/config',
@@ -170,8 +168,8 @@
           container: document.getElementById('app'),
           config,
           state: {
-            symbol,
-            lng,
+            symbol: 'BTCUSD',
+            lng: 'en',
           },
         })
 
@@ -179,7 +177,6 @@
           console.log('symbol change', data.symbol)
           window.history.replaceState({}, null, data.symbol);
         })
-        FuturesSDK.eventListener.on('invalidSymbol', (data) => window.location.href = `/${lng}/onchain/demo/BTCUSD`)
         FuturesSDK.eventListener.on('startLoad', () =>  console.log('startLoad event received'))
         FuturesSDK.eventListener.on('lngChange', (data) => window.history.pushState({}, null, `/${data.lng}/onchain/demo/${ data.symbol || 'BTCUSD'}`))
       }
