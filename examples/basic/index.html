@@ -178,7 +178,7 @@
           window.history.replaceState({}, null, data.symbol);
         })
         FuturesSDK.eventListener.on('startLoad', () =>  console.log('startLoad event received'))
-        FuturesSDK.eventListener.on('lngChange', (data) => window.history.pushState({}, null, `/${data.lng}/onchain/demo/${ data.symbol || 'BTCUSD'}`))
+        // FuturesSDK.eventListener.on('lngChange', (data) => window.history.pushState({}, null, `/${data.lng}/onchain/demo/${ data.symbol || 'BTCUSD'}`))
       }
       initApp(defaultConfig)
     </script>
