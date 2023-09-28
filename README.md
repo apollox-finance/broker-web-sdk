@@ -633,6 +633,12 @@ Use `config.variants.widget.default` to change the style of the widgets.
 2. Unzip the file, and upload to your CDN.
 3. Update the sdk version in your HTML file `<script src="/sdk/sdk.2.0.0.js"></script>`
 
+### Q：Why 'wss://perp-qa.pancakeswap.finance/plain/stream' return 404?
+
+Becasue SDK V2 is unlicensed, so there is no more whitelist, just use our production api
+`wss://fstream.apollox.finance/plain` replace of `wss://perp-qa.pancakeswap.finance/plain/stream`
+if using `wss://fstream.apollox.finance/plain` still return ws error, clean site data in chrome devtools maybe help.
+
 ### Q: What are the `br` and `gz`
 
 `br` => `brotil`
