@@ -6,22 +6,22 @@ The Permissionless DEX Engine is a comprehensive, decentralized derivative tradi
 
 ## Features & Benefits of ApolloX’s permissionless solution 
 
-### Permissionless 
+#### Permissionless 
 - Deploy your perpetual exchanges seamlessly in just a few steps, with no permission required from ApolloX. 
 
-### Trading fees revenue sharing
+#### Trading fees revenue sharing
 - Earn attractive commissions from perpetual trading fee income which does not include the liquidation fee, holding fee and funding fee. 
 
-### Trading margin assets
+#### Trading margin assets
 - On the BSC chain, users have the option to utilize USDT, USDC, ETH, and BTC as collateral to initiate trades. On the ARB chain, USDC.e, DAI and USDT are available as collateral. The settlement assets will be the user’s input assets. If settlement assets are insufficient, the platform will select the asset with the highest accumulated value in the liquidity pool as the settlement asset.
 
-### Liquidity sharing
+#### Liquidity sharing
 - Leverage ApolloX’s liquidity and market depth to guarantee that your traders' orders are always filled. With the counterparty ALP pool reaching $15 million in total for both BNB and Arbitrum Chains, deep liquidity is assured. ApolloX offers both classic and degen trading modes, with up to 1000x leverage available. 
 
-### Native DEX experience
+#### Native DEX experience
 - Partners have the ability to design a fully branded interface that aligns with their brand identity, thus personalizing the trading experience for their users.
 
-### Various Trading products
+#### Various Trading products
 - ApolloX provides a wide range of trading products like cryptocurrencies, forex and etc in the future.
 
 ## Revenue Sharing Model
