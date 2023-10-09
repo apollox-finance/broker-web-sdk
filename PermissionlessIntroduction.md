@@ -55,6 +55,7 @@ Once completed, you will receive a broker ID. Make sure to save this ID as it's 
 
 
 <br/>
+<br/>
 
 ## Broker  Get Share commission
 
