@@ -10,7 +10,7 @@ The Permissionless DEX Engine is a comprehensive, decentralized derivative tradi
 
 <br/>
 
-#### Permissionless 
+#### Permissionless
 - Deploy your perpetual exchanges seamlessly in just a few steps, with no permission required from ApolloX. 
 
 #### Trading fees revenue sharing
