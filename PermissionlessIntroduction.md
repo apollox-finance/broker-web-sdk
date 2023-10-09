@@ -47,11 +47,12 @@ The default sharing rate is set at 10% on both the BSC and Arbitrum chains. All 
 
 Upon entering the Permissionless DEX Engine page, you'll be required to complete an application form and finalize the configurations. Fill in the Broker name, Broker Domain, Profit Sharing address, and email address.
 
-![telegram-cloud-photo-size-5-6134198109375411730-y](https://github.com/apollox-finance/broker-web-sdk/assets/134277602/ed83ba93-cb60-4e2e-b521-8073cf91afee)
+<img src="https://github.com/apollox-finance/broker-web-sdk/assets/134277602/ed83ba93-cb60-4e2e-b521-8073cf91afee" width="500px">
 
 Once completed, you will receive a broker ID. Make sure to save this ID as it's necessary for deploying the SDK. You can now proceed with the SDK deployment. After fine-tuning the configurations and deploying the SDK, your perpetual exchange will be successfully created.
 
-![telegram-cloud-photo-size-5-6134198109375411731-y](https://github.com/apollox-finance/broker-web-sdk/assets/134277602/53da54cf-191b-458f-a0bc-3554961a7bda)
+<img src="https://github.com/apollox-finance/broker-web-sdk/assets/134277602/53da54cf-191b-458f-a0bc-3554961a7bda" width="500px">
+
 
 <br/>
 
