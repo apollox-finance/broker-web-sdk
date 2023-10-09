@@ -121,7 +121,7 @@ Import the static files that you just uploaded and init the trading page.
           staticBaseUrl: `/static/`,
           futuresWsHost: "wss://fstream.apollox.finance/plain",
           // It's important!!! DO NOT use origin in production because request will be proxied by client's server to APX domain, then `/common-check-ip` api will detect ip through client's server IP, that'll be wrong. It should detect user's ip.
-          apiBaseUrl: isDev ? `${origin}` : undefined, // in production, you don't need to configurate this, it's default as APX's url
+          apiBaseUrl: isDev ? origin : undefined, // in production, you don't need to configurate this, it's default as APX's url
           headerConfig: {},
           lightPalette: {
             primaryHover: "#6B78EE", // background hover
@@ -210,7 +210,8 @@ Import `sdk.js` and initialize SDK.
         container: document.getElementById("app"),
         config: {
           staticBaseUrl: `/static/`, // the url of static folder in your CDN
-          apiBaseUrl: isDev ? `${origin}` : undefined, // in production, you don't need to configurate this, it's default as APX's url
+          // It's important!!! DO NOT use origin in production because request will be proxied by client's server to APX domain, then `/common-check-ip` api will detect ip through client's server IP, that'll be wrong. It should detect user's ip.
+          apiBaseUrl: isDev ? origin : undefined, // in production, you don't need to configurate this, it's default as APX's url
           headerConfig: {},
           lightPalette: {
             primaryHover: "#6B78EE", // background hover
