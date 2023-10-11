@@ -18,7 +18,7 @@ The Permissionless DEX Engine is a comprehensive, decentralized derivative tradi
 - On the BSC chain, users have the option to utilize USDT, USDC, ETH, and BTC as collateral to initiate trades. On the ARB chain, USDC.e, DAI and USDT are available as collateral. The settlement assets will be the user’s input assets. If settlement assets are insufficient, the platform will select the asset with the highest accumulated value in the liquidity pool as the settlement asset.
 
 #### Liquidity sharing
-- Leverage ApolloX’s liquidity and market depth to guarantee that your traders' orders are always filled. With the counterparty ALP pool reaching $15 million in total for both BNB and Arbitrum Chains, deep liquidity is assured. ApolloX offers both classic and degen trading modes, with up to 1000x leverage available. 
+- Leverage ApolloX’s liquidity and market depth to guarantee that your traders' orders are always filled. With the counterparty ALP pool reaching $15 million in total for both BNB and Arbitrum Chains, deep liquidity is assured. ApolloX offers both classic and degen trading modes, with up to 750x leverage available. 
 
 #### Native DEX experience
 - Partners have the ability to design a fully branded interface that aligns with their brand identity, thus personalizing the trading experience for their users.
