@@ -2,7 +2,7 @@
 
 ### We launched sdk v2.0 which support On Chain Perp recently
 
-1. You still can use v1 trade sdk . [Go to v1.0](https://github.com/apollox-broker/apollox-broker-web-sdk/tree/v1)
+1. You still can use v1 trade sdk . [Go to v1.0](https://github.com/apollox-broker/apollox-broker-web-sdk)
 
 1. How to migration from v1 to v2. [Go to migration guide](./MigrationToV2.md)
 
