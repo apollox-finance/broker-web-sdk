@@ -12,7 +12,6 @@
 - [Download the Latest SDK](#download-the-latest-sdk-v200)
 - [Configs](#configs)
 - [Events](#events)
-- [Color Palette](#color-palette)
 - [Proxy Setup](#proxy-setuponly-if-you-change-the-api-domain-in-sdk)
 - [FAQ](#faq)
 
@@ -123,15 +122,8 @@ Import the static files that you just uploaded and init the trading page.
           // It's important!!! DO NOT use origin in production because request will be proxied by client's server to APX domain, then `/common-check-ip` api will detect ip through client's server IP, that'll be wrong. It should detect user's ip.
           apiBaseUrl: isDev ? origin : undefined, // in production, you don't need to configurate this, it's default as APX's url
           headerConfig: {},
-          lightPalette: {
-            primaryHover: "#6B78EE", // background hover
-            primary: "#584CEA", // background; text hover,
-            sellHover: "#FD5CB7",
-            sell: "#EF3E9E",
-            buyHover: "#3CC6BE",
-            buy: "#1DB1A8",
-          },
           defaultTheme: "light",
+          customCssUrl: "",
         },
         state: {
           symbol: "BTCUSD",
@@ -212,16 +204,10 @@ Import `sdk.js` and initialize SDK.
           staticBaseUrl: `/static/`, // the url of static folder in your CDN
           // It's important!!! DO NOT use origin in production because request will be proxied by client's server to APX domain, then `/common-check-ip` api will detect ip through client's server IP, that'll be wrong. It should detect user's ip.
           apiBaseUrl: isDev ? origin : undefined, // in production, you don't need to configurate this, it's default as APX's url
+          graphqlTemplateUrl: 'https://api.thegraph.com/subgraphs/name/apollx-apx/apollox-perp-{{network}}',  // graphql template url
           headerConfig: {},
-          lightPalette: {
-            primaryHover: "#6B78EE", // background hover
-            primary: "#584CEA", // background; text hover,
-            sellHover: "#FD5CB7",
-            sell: "#EF3E9E",
-            buyHover: "#3CC6BE",
-            buy: "#1DB1A8",
-          },
           defaultTheme: "light",
+          customCssUrl: ""
         },
         state: {
           symbol: "BTCUSD",
@@ -239,12 +225,11 @@ Import `sdk.js` and initialize SDK.
 type Config = {
   staticBaseUrl: string;
   apiBaseUrl: string;
+  graphqlTemplateUrl?: string, 
   brandName?: string;
   brokerId: number;
   i18nBaseUrl: string;
   configBaseUrl: string;
-  darkPalette?: Partial<PaletteInterface>;
-  lightPalette?: Partial<PaletteInterface>;
   enableThemeToggle?: boolean;
   isTestnet?: boolean;
   supportNetworks?: SupportedNetwork[];
@@ -256,7 +241,7 @@ type Config = {
   defaultTheme?: "dark" | "light";
   fontFamily?: string;
   fontUrl?: string;
-  variants?: Variants;
+  customCssUrl?: string;
 };
 ```
 
@@ -283,61 +268,6 @@ the i18n base url
 ### configBaseUrl
 
 the config base url
-
-### lightPalette, darkPalette
-
-We support theme styles, you can customize the colors for light mode or dark mode, see [color palette](#color-palette).
-
-```ts
-type PaletteInterface = {
-  modalBg: string;
-  popupBg: string;
-  inputBg: string;
-  bg1: string; // default backgroud; dropdown backgroud; tooltip backgroud
-  bg2: string;
-  bg3: string; // disable/hover backgroud; disable line
-  bg4: string;
-  bg5: string; // navigation backgroud; mask backgroud
-  bg6: string; // shadow
-  alertYellowBg: string;
-  badgeYellowBg: string;
-  primaryHover: string;
-  primary: string;
-  toastFailBg: string;
-  depthSellBg: string;
-  sellHover: string;
-  sell: string;
-  toastSuccessBg: string;
-  depthBuyBg: string;
-  buyHover: string;
-  buy: string;
-  overallBg: string;
-  moduleBg: string;
-  newLine: string;
-  t: {
-    primary: string;
-    secondary: string;
-    third: string;
-    disabled: string;
-    yellow: string;
-    sell: string;
-    buy: string;
-    white: string;
-    emphasize: string;
-  };
-  slider: {
-    line: string;
-    disabledBar: string;
-    progressBar: string;
-    tooltipText: string;
-    tooltipBg: string;
-    radioButtonBg: string;
-    radioButtonBorderColor: string;
-    stepperBg: string;
-    stepperBorderColor: string;
-  };
-};
-```
 
 ### supportNetworks
 
@@ -499,42 +429,19 @@ same as https://www.w3schools.com/cssref/pr_font_font-family.asp
 
 the url of the custom font
 
-### variants
+### ~~lightPalette, darkPalette~~
+~~We support theme styles, you can customize the colors for light mode or dark mode, see color palette.~~
 
-experimental feature, for customized style
+already deprecated since **v2.0.3**
 
-```ts
-type Variants = {
-  widget: Record<string, CSSProperties>;
-};
-```
+### ~~variants~~
+~~experimental feature, for customized style.~~ 
 
-<details>
-  <summary>example</summary>
+already deprecated since **v2.0.3**
 
-```js
-variants: {
-  widget: {
-    default: {
-      borderRadius: '16px',
-      border: '1px solid',
-      borderColor: 'primary'
-    }
-  },
-  button: {
-    default: {
-      borderRadius: '16px'
-    }
-  },
-  orderform: {
-    inputWrapper: {
-      borderRadius: '16px',
-    }
-  }
-}
-```
+### customCssUrl
 
-</details>
+custom css url (support since v2.0.3). since we deprecated our `darkPalette`/`lightPalette`/`variants` in v2.0.3, you have to customize style through this new property. [default template we used](https://github.com/apollox-finance/broker-web-sdk/blob/master/custom.css)
 
 ## Events
 
@@ -564,11 +471,6 @@ FuturesSDK.eventListener.on("lngChange", (data) => {
   ); // assume the url is formaated as /:lng/futures/:symbol
 });
 ```
-
-## Color Palette
-
-[https://www.figma.com/file/OH3FtJJ8I7EbVNrG6bupIs/Broker-Color-Usage?node-id=0%3A1](https://www.figma.com/file/OH3FtJJ8I7EbVNrG6bupIs/Broker%E2%80%A8-Color-Usage?node-id=0%3A1)
-password: 0706
 
 ## Proxy Setup(only if you change the API domain in SDK)
 
@@ -629,7 +531,37 @@ Since we have two themes, dark and light, and also care about the RWD, we have 5
 
 ### Q: How to change border-radius of the widgets
 
-Use `config.variants.widget.default` to change the style of the widgets.
+There are some classes that you can override them with [customCssUrl](https://github.com/apollox-finance/broker-web-sdk/tree/v2.0.3#customCssUrl).
+```
+  .button {
+    @apply rounded-2xl;
+  }
+  .sheet-content {
+    @apply rounded-t-2xl;
+  }
+  .input-text-field,
+  .input-base-input {
+    @apply rounded-lg;
+  }
+  .dialog-content {
+    @apply rounded-[2rem];
+  }
+  .order-form-card {
+    @apply rounded-2xl;
+  }
+  .radio-option {
+    @apply rounded-lg;
+  }
+  .currency-input {
+    @apply rounded-lg;
+  }
+  .direction-switch-long {
+    @apply rounded-l-2xl;
+  }
+  .direction-switch-short {
+    @apply rounded-r-2xl;
+  }
+```
 
 ### Q: Hot to migrate to latest SDK
 
