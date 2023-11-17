@@ -12,7 +12,6 @@
 - [Download the Latest SDK](#download-the-latest-sdk-v200)
 - [Configs](#configs)
 - [Events](#events)
-- [Color Palette](#color-palette)
 - [Proxy Setup](#proxy-setuponly-if-you-change-the-api-domain-in-sdk)
 - [FAQ](#faq)
 
@@ -123,14 +122,6 @@ Import the static files that you just uploaded and init the trading page.
           // It's important!!! DO NOT use origin in production because request will be proxied by client's server to APX domain, then `/common-check-ip` api will detect ip through client's server IP, that'll be wrong. It should detect user's ip.
           apiBaseUrl: isDev ? origin : undefined, // in production, you don't need to configurate this, it's default as APX's url
           headerConfig: {},
-          lightPalette: {
-            primaryHover: "#6B78EE", // background hover
-            primary: "#584CEA", // background; text hover,
-            sellHover: "#FD5CB7",
-            sell: "#EF3E9E",
-            buyHover: "#3CC6BE",
-            buy: "#1DB1A8",
-          },
           defaultTheme: "light",
           customCssUrl: "",
         },
