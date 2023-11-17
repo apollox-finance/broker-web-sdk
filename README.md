@@ -21,8 +21,6 @@ Before we start, make sure you set up AWS CLI [https://docs.aws.amazon.com/cli/l
 
 Download the latest version of SDK zip file in [Releases](https://github.com/apollox-finance/broker-web-sdk/releases).
 
-![download-link](./docs/images/download-link-v2.png)
-
 Unzip the file and upload those 2 folders(static, sdk) to AWS S3 space.
 
 ```sh
@@ -147,7 +145,7 @@ aws s3 cp ./index.html s3://apx-s3-test/index.html --grants read=uri=http://acs.
 
 ```
 
-## Download the Latest SDK (v2.0.0)
+## Download the Latest SDK
 
 You can find SDK in the release list
 Releases list: [https://github.com/apollox-finance/broker-web-sdk/releases](https://github.com/apollox-finance/broker-web-sdk/releases), and download the latest zip file
