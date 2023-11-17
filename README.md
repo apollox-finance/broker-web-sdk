@@ -1,13 +1,8 @@
-# ApolloX Broker Web SDK 2.0
+# ApolloX Broker Web SDK
 
-### We launched sdk v2.0 which support On Chain Perp recently
-
-1. You still can use v1 trade sdk . [Go to v1.0](https://github.com/apollox-broker/apollox-broker-web-sdk)
-
-1. How to migration from v1 to v2. [Go to migration guide](./MigrationToV2.md)
-
-1. [Permissionless DEX Engine Product Introduction](./PermissionlessIntroduction.md)
-
+- You still can use v1 trade sdk . [Go to v1.0](https://github.com/apollox-broker/apollox-broker-web-sdk)
+- How to migration from v1 to v2. [Go to migration guide](./MigrationToV2.md)
+- [Permissionless DEX Engine Product Introduction](./PermissionlessIntroduction.md)
 - [AWS Onboarding Process](#aws-onboarding-process)
 - [Download the Latest SDK](#download-the-latest-sdk-v200)
 - [Configs](#configs)
@@ -106,7 +101,7 @@ Import the static files that you just uploaded and init the trading page.
         overflow: hidden;
       }
     </style>
-    <script src="/sdk/sdk.2.0.0.js"></script>
+    <script src="/sdk/sdk.3.0.0.js"></script>
   </head>
   <body>
     <div id="app"></div>
@@ -432,16 +427,16 @@ the url of the custom font
 ### ~~lightPalette, darkPalette~~
 ~~We support theme styles, you can customize the colors for light mode or dark mode, see color palette.~~
 
-already deprecated since **v2.0.3**
+Remove in 3.0. Use `customCssUrl` instead
 
 ### ~~variants~~
 ~~experimental feature, for customized style.~~ 
 
-already deprecated since **v2.0.3**
+Remove in 3.0. Use `customCssUrl` instead
 
 ### customCssUrl
 
-custom css url (support since v2.0.3). since we deprecated our `darkPalette`/`lightPalette`/`variants` in v2.0.3, you have to customize style through this new property. [default template we used](https://github.com/apollox-finance/broker-web-sdk/blob/master/custom.css)
+custom css url (support since v2.0.3). since we deprecated our `darkPalette`/`lightPalette`/`variants` in v3.0, you have to customize style through this new property. [default template we used](https://github.com/apollox-finance/broker-web-sdk/blob/master/custom.css)
 
 ## Events
 
