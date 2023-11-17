@@ -527,32 +527,32 @@ Since we have two themes, dark and light, and also care about the RWD, we have 5
 There are some classes that you can override them with [customCssUrl](https://github.com/apollox-finance/broker-web-sdk/tree/v2.0.3#customCssUrl).
 ```
   .button {
-    @apply rounded-2xl;
+    // your styles
   }
   .sheet-content {
-    @apply rounded-t-2xl;
+    // your styles
   }
   .input-text-field,
   .input-base-input {
-    @apply rounded-lg;
+    // your styles
   }
   .dialog-content {
-    @apply rounded-[2rem];
+    // your styles
   }
   .order-form-card {
-    @apply rounded-2xl;
+    // your styles
   }
   .radio-option {
-    @apply rounded-lg;
+    // your styles
   }
   .currency-input {
-    @apply rounded-lg;
+    // your styles
   }
   .direction-switch-long {
-    @apply rounded-l-2xl;
+    // your styles
   }
   .direction-switch-short {
-    @apply rounded-r-2xl;
+    // your styles
   }
 ```
 
