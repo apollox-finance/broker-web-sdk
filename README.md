@@ -522,37 +522,37 @@ Since we have two themes, dark and light, and also care about the RWD, we have 5
 - `config.headerCnfig.logo.darkImgUrl`: the image url for dark theme
 - `config.headerCnfig.logo.lightImgUrl`: the image url for light theme
 
-### Q: How to change border-radius of the widgets
+### Q: How to apply custom styles to some of the widgets
 
 There are some classes that you can override them with [customCssUrl](https://github.com/apollox-finance/broker-web-sdk/tree/v2.0.3#customCssUrl).
 ```css
   .button {
-    // your styles
+    /* your styles */
   }
   .sheet-content {
-    // your styles
+    /* your styles */
   }
   .input-text-field,
   .input-base-input {
-    // your styles
+    /* your styles */
   }
   .dialog-content {
-    // your styles
+    /* your styles */
   }
   .order-form-card {
-    // your styles
+    /* your styles */
   }
   .radio-option {
-    // your styles
+    /* your styles */
   }
   .currency-input {
-    // your styles
+    /* your styles */
   }
   .direction-switch-long {
-    // your styles
+    /* your styles */
   }
   .direction-switch-short {
-    // your styles
+    /* your styles */
   }
 ```
 
