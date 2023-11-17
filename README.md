@@ -440,15 +440,15 @@ the url of the custom font
 
 ### ~~lightPalette, darkPalette~~
 ~~We support theme styles, you can customize the colors for light mode or dark mode, see color palette.~~
-already deprecated on **v2.0.3**
+already deprecated since **v2.0.3**
 
 ### ~~variants~~
 ~~experimental feature, for customized style.~~ 
-already deprecated on **v2.0.3**
+already deprecated since **v2.0.3**
 
 ### customCssUrl
 
-custom css url (support on v2.0.3). since we deprecated our `darkPalette`/`lightPalette`/`variants` on v2.0.3, you have to custom style through this new property. [default template we used](https://github.com/apollox-finance/broker-web-sdk/blob/master/custom.css)
+custom css url (support since v2.0.3). since we deprecated our `darkPalette`/`lightPalette`/`variants` in v2.0.3, you have to customize style through this new property. [default template we used](https://github.com/apollox-finance/broker-web-sdk/blob/master/custom.css)
 
 ## Events
 
