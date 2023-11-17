@@ -431,10 +431,12 @@ the url of the custom font
 
 ### ~~lightPalette, darkPalette~~
 ~~We support theme styles, you can customize the colors for light mode or dark mode, see color palette.~~
+
 already deprecated since **v2.0.3**
 
 ### ~~variants~~
 ~~experimental feature, for customized style.~~ 
+
 already deprecated since **v2.0.3**
 
 ### customCssUrl
