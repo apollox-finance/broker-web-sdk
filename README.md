@@ -525,7 +525,7 @@ Since we have two themes, dark and light, and also care about the RWD, we have 5
 ### Q: How to change border-radius of the widgets
 
 There are some classes that you can override them with [customCssUrl](https://github.com/apollox-finance/broker-web-sdk/tree/v2.0.3#customCssUrl).
-```
+```css
   .button {
     // your styles
   }
