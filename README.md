@@ -263,8 +263,8 @@ the i18n base url
 the config base url
 
 ### supportNetworks
-
-default is ['bnb']
+  - values ['bnb', 'arb', 'opbnb', 'base']
+default is ['bnb', 'arb']
 
 ```ts
 export type SupportedNetwork = "bnb";
