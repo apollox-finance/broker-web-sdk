@@ -264,7 +264,7 @@ the config base url
 
 ### supportNetworks
   - values ['bnb', 'arb', 'opbnb', 'base']
-default is ['bnb', 'arb']
+  - default is ['bnb', 'arb']
 
 ```ts
 export type SupportedNetwork = "bnb";
