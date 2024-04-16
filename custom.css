@@ -1,3 +1,8 @@
+
+:root {
+  --font-site-main: Arial;
+}
+
 html.light {
   /* font colors */
   --colors-t-primary: #1e1f29;
