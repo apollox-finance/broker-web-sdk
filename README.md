@@ -232,8 +232,6 @@ type Config = {
   loadingImage?: LoadingImage;
   notificationPosition?: NotificationPosition;
   defaultTheme?: "dark" | "light";
-  fontFamily?: string;
-  fontUrl?: string;
   customCssUrl?: string;
 };
 ```
@@ -414,18 +412,35 @@ type NotificationPosition = {
 
 to configure the initial theme value, theme value will then be stored in cookies with key 'theme'
 
-### fontFamily
+### ~~fontFamily~~
+Removed in 3.0.
+use `customCssUrl` instead, you can set css variable as below:
+```css
+:root {
+  --font-site-main: Roboto;
+}
+```
 
-same as https://www.w3schools.com/cssref/pr_font_font-family.asp
+### ~~fontUrl~~
+Removed in 3.0.
+use `customCssUrl` instead, you can set as below:
+```css
 
-### fontUrl
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('https://static.apollox.com/cloud-futures/static/fonts/Roboto/Roboto-Light.ttf') format('truetype');
+}
+```
 
 the url of the custom font
 
 ### ~~lightPalette, darkPalette~~
 ~~We support theme styles, you can customize the colors for light mode or dark mode, see color palette.~~
 
-Remove in 3.0. Use `customCssUrl` instead
+Removed in 3.0. Use `customCssUrl` instead
 
 ### ~~variants~~
 ~~experimental feature, for customized style.~~ 
@@ -494,7 +509,7 @@ Set `config.enableThemeToggle` to false.
 
 ### Q: How to change the font?
 
-Set `config.fontFamily`, or set `config.fontUrl` for custom font.
+Set `config.customCssUrl`
 
 ### Q:How to set the price display on the navigation bar?
 
