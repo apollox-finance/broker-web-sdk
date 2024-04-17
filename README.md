@@ -435,8 +435,6 @@ use `customCssUrl` instead, you can set as below:
 }
 ```
 
-the url of the custom font
-
 ### ~~lightPalette, darkPalette~~
 ~~We support theme styles, you can customize the colors for light mode or dark mode, see color palette.~~
 
