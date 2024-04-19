@@ -22,57 +22,7 @@
   <body>
     <div id="app"></div>
     <script>
-      const darkPalette = {
-        modalBg: '#232531',
-        popupBg: '#1E1F31',
-        bg1: '#171822', // default backgroud; dropdown backgroud; tooltip backgroud
-        bg2: '#0B0C12',
-        bg3: '#2D2E3F', // disable/hover backgroud; disable line
-        bg4: '#5A5C75',
-        bg5: '#FFFFFF', // navigation backgroud; mask backgroud
-        bg6: '#0A0A0F', // shadow
-        line: '#3B3D59', // line; outlines; input border
-        liteBg1: '#20262D',
-        liteBg2: '#191A1F',
-        t: {
-          primary: '#F0F0F5',
-          secondary: '#B2B4C6',
-          third: '#72768F',
-          placeholder: '#5A5C74',
-          disabled: '#5A5C74',
-          yellow: '#7E9AFF',
-          buy: '#2BBDB5',
-          sell: '#FF5AB5',
-          toast: '#3D509C',
-          white: '#FFFFFF',
-          emphasize: '#FFD37E',
-        },
-        slider: {
-          radioButtonBorderColor: '#FFFFFF',
-        },
-        alertYellowBg: '#FFB237',
-        badgeYellowBg: '#313553',
-        outlineHover: '#4C507A',
-        primaryHover: '#6B78EE', // background hover
-        primary: '#584CEA', // background; text hover
-        toastFailBg: '#4A2A3C',
-        depthSellBg: '#4A2A3C',
-        sellHover: '#FD5CB7',
-        sell: '#EF3E9E',
-        toastSuccessBg: '#2E4145',
-        depthBuyBg: '#2E4145',
-        buyHover: '#3CC6BE',
-        buy: '#1DB1A8',
-        overallBg: '#26283C',
-        moduleBg: '#121221',
-        inputBg: '#2C2D43',
-        tagBg: '#222742',
-        newLine: '#27273D',
-        lineForK: '#1B1F24',
-        icons: {
-          close: '#424555',
-        },
-      }
+      
       const params = window.location.pathname.split('/')
       let lng = params[1]
       const _symbol = params[params.length - 1]
@@ -150,7 +100,7 @@
             enabled: true,
           },
         },
-        customCssUrl: 'https://127.0.0.1:3333/custom.css',
+        // customCssUrl: 'https://127.0.0.1:3333/custom.css',
       }
 
       function initApp(config) {
