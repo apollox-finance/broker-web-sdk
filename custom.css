@@ -1,192 +1,185 @@
+html.light {
+  /* font colors */
+  --colors-t-primary: 23 24 34;
+  --colors-t-secondary: 68 71 95;
+  --colors-t-third: 114 118 143;
+  --colors-t-disabled: 105 107 130;
+  --colors-t-placeholder: 181 183 193;
+  --colors-t-onColor: 255 255 255;
+  --colors-t-consistent: 255 255 255;
+  --colors-t-inverse: 11 12 18;
+  --colors-t-error: 255 22 149;
+  --colors-t-buy: 43 189 181;
+  --colors-t-yellow: 126 154 255;
+  --colors-t-sell: 255 90 181;
+  --colors-t-link: 126 154 255;
+  --colors-t-linkHover: 152 161 248;
+  --colors-t-white: 255 255 255;
+  --colors-t-emphasize: 255 211 126;
+  /* border */
+  --colors-border-line: 216 218 227;
+  --colors-border-lineSubtle: 235 235 239;
+  --colors-border-lineStrong: 199 201 208;
+  /* background */
+  --colors-background-bg1: 253 253 253;
+  --colors-background-bg2: 255 255 255;
+  --colors-background-bg1Accent01: 243 243 247;
+  --colors-background-bg1Accent02: 243 243 247;
+
+  /* interactive */
+  --colors-interactive-disabled: 223 223 224;
+  --colors-interactive-primary: 106 94 248;
+  --colors-interactive-primaryHover: 115 128 247;
+  --colors-interactive-primaryActive: 143 148 255;
+  --colors-interactive-primaryGradient: linear-gradient(93.96deg, #e05fbb 0.76%, #4250f4 100.57%);
+  --colors-interactive-primaryAccent01: 76 80 122;
+  --colors-interactive-primaryAccent02: 49 53 83;
+  --colors-interactive-buy: 29 177 168;
+  --colors-interactive-buyHover: 60 198 190;
+  --colors-interactive-buyActive: 94 206 194;
+  --colors-interactive-buyGradient: linear-gradient(90deg, #1DB1A8 0%, #09978F 100%);
+  --colors-interactive-buyAccent01: 46 65 69;
+  --colors-interactive-sell: 239 62 158;
+  --colors-interactive-sellHover: 253 92 183;
+  --colors-interactive-sellActive: 244 110 185;
+  --colors-interactive-sellGradient: linear-gradient(90deg, #EF3E9E 0%, #D12683 100%);
+  --colors-interactive-sellAccent01: 74 42 60;
+  --colors-interactive-interactiveBg: 253 253 253;
+  --colors-interactive-interactiveBgHover: 242 242 246;
+  --colors-interactive-interactiveBgActive: 242 242 246;
+  --colors-interactive-interactiveBgSelected: 242 242 246;
+  --colors-interactive-interactive01: 235 235 239;
+  --colors-interactive-interactive01Hover: 229 229 233;
+  --colors-interactive-interactive01Active: 229 229 233;
+  --colors-interactive-interactive01Selected: 229 229 233;
+  --colors-interactive-interactive02: 215 215 223;
+  --colors-interactive-interactive02Hover: 205 205 213;
+  --colors-interactive-interactive02Active: 205 205 213;
+  --colors-interactive-interactive02Selected: 205 205 213;
+  --colors-interactive-interactivePopup: 255 255 255;
+  /* support */
+  --colors-support-success: 29 177 168;
+  --colors-support-error: 255 22 149;
+  --colors-support-warning: 255 193 34;
+  --colors-support-info: 24 31 51;
+  /* others */
+  --colors-highLight: 249 176 34;
+  --colors-overlay: rgba(0, 0, 0, 0.5);
+}
+
+:root,
+html.dark {
+  /* font colors */
+  --colors-t-primary: 240 240 245;
+  --colors-t-secondary: 178 180 198;
+  --colors-t-third: 114 118 143;
+  --colors-t-disabled: 105 107 130;
+  --colors-t-placeholder: 68 71 95;
+  --colors-t-onColor: 255 255 255;
+  --colors-t-consistent: 255 255 255;
+  --colors-t-inverse: 11 12 18;
+  --colors-t-error: 255 22 149;
+  --colors-t-buy: 43 189 181;
+  --colors-t-yellow: 126 154 255;
+  --colors-t-sell: 255 90 181;
+  --colors-t-link: 126 154 255;
+  --colors-t-linkHover: 152 161 248;
+  --colors-t-white: 255 255 255;
+  --colors-t-emphasize: 255 211 126;
+  /* border */
+  --colors-border-line: 59 61 89;
+  --colors-border-lineSubtle: 48 50 74;
+  --colors-border-lineStrong: 69 71 103;
+  /* background */
+  --colors-background-bg1: 23 24 34;
+  --colors-background-bg2: 11 12 18;
+  --colors-background-bg1Accent01: 36 37 52;
+  --colors-background-bg1Accent02: 42 44 60;
+  /* interactive */
+  --colors-interactive-disabled: 63 65 93;
+  --colors-interactive-primary: 88 76 234;
+  --colors-interactive-primaryHover: 107 120 238;
+  --colors-interactive-primaryActive: 131 136 245;
+  --colors-interactive-primaryGradient: linear-gradient(90deg, #e05fbb 0%, #4250f4 100%);
+  --colors-interactive-primaryAccent01: 76 80 122;
+  --colors-interactive-primaryAccent02: 49 53 83;
+  --colors-interactive-buy: 29 177 168;
+  --colors-interactive-buyHover: 60 198 190;
+  --colors-interactive-buyActive: 94 206 194;
+  --colors-interactive-buyGradient: linear-gradient(90deg, #1DB1A8 0%, #09978F 100%);
+  --colors-interactive-buyAccent01: 46 65 69;
+  --colors-interactive-sell: 239 62 158;
+  --colors-interactive-sellHover: 253 92 183;
+  --colors-interactive-sellActive: 244 110 185;
+  --colors-interactive-sellGradient: linear-gradient(90deg, #ef3e9e 0%, #d12683 100%);
+  --colors-interactive-sellAccent01: 74 42 60;
+  --colors-interactive-interactiveBg: 30 31 49;
+  --colors-interactive-interactiveBgHover: 38 39 61;
+  --colors-interactive-interactiveBgActive: 54 54 85;
+  --colors-interactive-interactiveBgSelected: 46 47 73;
+  --colors-interactive-interactive01: 44 45 67;
+  --colors-interactive-interactive01Hover: 55 56 82;
+  --colors-interactive-interactive01Active: 77 79 110;
+  --colors-interactive-interactive01Selected: 66 67 97;
+  --colors-interactive-interactive02: 59 61 89;
+  --colors-interactive-interactive02Hover: 71 73 107;
+  --colors-interactive-interactive02Active: 98 101 141;
+  --colors-interactive-interactive02Selected: 85 87 124;
+  --colors-interactive-interactivePopup: 90 92 116;
+  /* support */
+  --colors-support-success: 29 177 168;
+  --colors-support-error: 255 22 149;
+  --colors-support-warning: 248 199 72;
+  --colors-support-info: 24 31 51;
+  /* others */
+  --colors-highLight: 255 211 126;
+  --colors-overlay: rgba(0, 0, 0, 0.5);
+}
 
 :root {
   --font-site-main: Arial;
 }
 
-html.light {
-  /* font colors */
-  --colors-t-primary: #1e1f29;
-  --colors-t-secondary: #474857;
-  --colors-t-third: #70738a;
-  --colors-t-disabled: #b7b9c6;
-  --colors-t-placeholder: #5e6673;
-  --colors-t-onColor: #ffffff;
-  --colors-t-consistent: #ffffff;
-  --colors-t-inverse: #0b0c12;
-  --colors-t-error: #cf1279;
-  --colors-t-buy: #1db1a8;
-  --colors-t-sell: #ef3e9e;
-  --colors-t-link: #6978ff;
-  --colors-t-linkHover: #98a1f8;
-  --colors-t-white: #ffffff;
-  --colors-t-emphasize: #ffd37e;
-  /* border */
-  --colors-border-line: #eaebef;
-  --colors-border-lineSubtle: #f2f3f4;
-  --colors-border-lineStrong: #dce0e3;
-  /* background */
-  --colors-background-bg1: #ffffff;
-  --colors-background-bg2: #fafafa;
-  --colors-background-bg1Accent01: #f3f3f5;
-  --colors-background-bg1Accent02: #f3f3f5;
-
-  /* interactive */
-  --colors-interactive-disabled: #3f415d;
-  --colors-interactive-primary: #584cea;
-  --colors-interactive-primaryHover: #6b78ee;
-  --colors-interactive-primaryActive: #6b78ee;
-  --colors-interactive-primaryGradient: linear-gradient(93.96deg, #e05fbb 0.76%, #4250f4 100.57%);
-  --colors-interactive-primaryAccent01: #4c507a;
-  --colors-interactive-primaryAccent02: #e6e9ff;
-  --colors-interactive-buy: #1db1a8;
-  --colors-interactive-buyHover: #3cc6be;
-  --colors-interactive-buyActive: #3cc6be;
-  --colors-interactive-sell: #ef3e9e;
-  --colors-interactive-sellHover: #fd5cb7;
-  --colors-interactive-sellActive: #fd5cb7;
-  --colors-interactive-sellGradient: linear-gradient(90deg, #ef3e9e 0%, #d12683 100%);
-  --colors-interactive-sellAccent01: #ffe6f4;
-  --colors-interactive-interactiveBg: #ffffff;
-  --colors-interactive-interactiveBgHover: #f3f3f5;
-  --colors-interactive-interactiveBgActive: #363655;
-  --colors-interactive-interactiveBgSelected: #2e2f49;
-  --colors-interactive-interactive01: #f2f2f5;
-  --colors-interactive-interactive01Hover: #f3f3f5;
-  --colors-interactive-interactive01Active: #4d4f6e;
-  --colors-interactive-interactive01Selected: #424361;
-  --colors-interactive-interactive02: #eaebef;
-  --colors-interactive-interactive02-a-30: #eaebef4d;
-  --colors-interactive-interactive02Hover: #f3f3f5;
-  --colors-interactive-interactive02Active: #e8e8e8;
-  --colors-interactive-interactive02Selected: #55577c;
-  --colors-interactive-interactivePopup: #5a5c74;
-  /* support */
-  --colors-support-success: #e6fffd;
-  --colors-support-error: #ffe6f4;
-  --colors-support-warning: #f8c748;
-  --colors-support-warning-a-15: #ffd37e26;
-  --colors-support-info: #181f33;
-  /* others */
-  --colors-highLight: #f48461;
-  --colors-overlay: rgba(0, 0, 0, 0.5);
+/* customize scroll bar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 5px;
 }
 
-:root,
-  html.dark {
-    /* font colors */
-    --colors-t-primary: #f0f0f5;
-    --colors-t-secondary: #b2b4c6;
-    --colors-t-third: #72768f;
-    --colors-t-disabled: #696b82;
-    --colors-t-placeholder: #44475f;
-    --colors-t-onColor: #ffffff;
-    --colors-t-consistent: #ffffff;
-    --colors-t-inverse: #0b0c12;
-    --colors-t-error: #cf1279;
-    --colors-t-buy: #2bbdb5;
-    --colors-t-yellow: #7e9aff;
-    --colors-t-sell: #ff5ab5;
-    --colors-t-link: #7e9aff;
-    --colors-t-linkHover: #98a1f8;
-    --colors-t-white: #ffffff;
-    --colors-t-emphasize: #ffd37e;
-    /* border */
-    --colors-border-line: #3b3d59;
-    --colors-border-lineSubtle: #30324a;
-    --colors-border-lineStrong: #454767;
-    /* background */
-    --colors-background-bg1: #171822;
-    --colors-background-bg2: #0b0c12;
-    --colors-background-bg1Accent01: #242534;
-    --colors-background-bg1Accent02: #2a2c3c;
-    /* interactive */
-    --colors-interactive-disabled: #3f415d;
-    --colors-interactive-primary: #584cea;
-    --colors-interactive-primaryHover: #6b78ee;
-    --colors-interactive-primaryActive: #8388f5;
-    --colors-interactive-primaryGradient: linear-gradient(90deg, #e05fbb 0%, #4250f4 100%);
-    --colors-interactive-primaryAccent01: #4c507a;
-    --colors-interactive-primaryAccent02: #313553;
-    --colors-interactive-buy: #1db1a8;
-    --colors-interactive-buyHover: #3cc6be;
-    --colors-interactive-buyActive: #5ecec2;
-    --colors-interactive-sell: #ef3e9e;
-    --colors-interactive-sellHover: #fd5cb7;
-    --colors-interactive-sellActive: #f46eb9;
-    --colors-interactive-sellGradient: linear-gradient(90deg, #ef3e9e 0%, #d12683 100%);
-    --colors-interactive-sellAccent01: #4a2a3c;
-    --colors-interactive-interactiveBg: #1e1f31;
-    --colors-interactive-interactiveBgHover: #26273d;
-    --colors-interactive-interactiveBgActive: #363655;
-    --colors-interactive-interactiveBgSelected: #2e2f49;
-    --colors-interactive-interactive01: #2c2d43;
-    --colors-interactive-interactive01Hover: #373852;
-    --colors-interactive-interactive01Active: #4d4f6e;
-    --colors-interactive-interactive01Selected: #424361;
-    --colors-interactive-interactive02: #3b3d59;
-    --colors-interactive-interactive02-a-30: #3b3d594d;
-    --colors-interactive-interactive02Hover: #47496b;
-    --colors-interactive-interactive02Active: #796e91;
-    --colors-interactive-interactive02Selected: #55577c;
-    --colors-interactive-interactivePopup: #5a5c74;
-    /* support */
-    --colors-support-success: #1db1a8;
-    --colors-support-error: #cf1279;
-    --colors-support-warning: #f8c748;
-    --colors-support-warning-a-15: #ffd37e26;
-    --colors-support-info: #181f33;
-    /* others */
-    --colors-highLight: #f48461;
-    --colors-overlay: rgba(0, 0, 0, 0.5);
-  }
+::-webkit-scrollbar-thumb {
+  background: var(--colors-border-line);
+  border-radius: 4px;
+  width: 4px;
+}
 
-  /* customize scroll bar */
-  ::-webkit-scrollbar {
-    width: 6px;
-    height: 5px;
-  }
+::-webkit-scrollbar-track {
+  background: transparent;
+}
 
-  ::-webkit-scrollbar-thumb {
-    background: var(--colors-border-line);
-    border-radius: 4px;
-    width: 4px;
-  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
+/* customize widget style */
+.button {}
 
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
+.sheet-content {}
 
-  /* customize widget style */
-  .button {
-  }
+.input-text-field,
+.input-base-input {}
 
-  .sheet-content {
-  }
+.dialog-content {}
 
-  .input-text-field,
-  .input-base-input {
-  }
+/* @astrolabs/broker-widget theme class */
 
-  .dialog-content {
-  }
+.order-form-card {}
 
-  .order-form-card {
-  }
+.radio-option {}
 
-  .radio-option {
-  }
+.currency-input {}
 
-  .currency-input {
-  }
+.direction-switch-long {}
 
-  .direction-switch-long {
-  }
-
-  .direction-switch-short {
-  }
+.direction-switch-short {}
