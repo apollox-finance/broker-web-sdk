@@ -309,7 +309,9 @@ type HeaderConfig = {
 
   logo?: {
     darkImgUrl: string;
+    darkRWDImgUrl: string;
     lightImgUrl: string;
+    lightRWDImgUrl: string;
     navTo?: string;
     navTarget?: "_blank" | "_parent"; // default '_parent'
   };
