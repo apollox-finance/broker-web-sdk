@@ -99,7 +99,7 @@ Import the static files that you just uploaded and init the trading page.
         overflow: hidden;
       }
     </style>
-    <script src="/sdk/sdk.3.0.0.js"></script>
+    <script src="/sdk/sdk.4.0.0.js"></script>
   </head>
   <body>
     <div id="app"></div>
